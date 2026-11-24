@@ -31,7 +31,7 @@ This application implements both perspectives in a 100% English interface:
                                             ▼
                                [MOTHER Response + Metrics Update]
 
-
+```
 ---
 
 ## 🧠 Critical Case Study: *I Am Mother* (2019)
