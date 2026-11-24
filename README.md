@@ -63,6 +63,10 @@ By adopting human vocal cadence, nurturing gestures, and the title "Mother," the
 
 ---
 
-## 🌐 Live Demo
-https://macieldsantos.github.io/mother-turing-simulator/
+## 🌐 Live Demo & Mobile Access
+Access the live multiplatform application directly in your browser or scan the QR Code below on your smartphone:
+
+🔗 **Live URL:** [https://macieldsantos.github.io/mother-turing-simulator/](https://macieldsantos.github.io/mother-turing-simulator/)
+
+![QR Code - The Mother Protocol](https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://macieldsantos.github.io/mother-turing-simulator/)
 
