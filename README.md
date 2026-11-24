@@ -62,3 +62,7 @@ By adopting human vocal cadence, nurturing gestures, and the title "Mother," the
 | **Utilitarianism** | An ethical theory that determines right from wrong by focusing on outcomes, prioritizing the greatest good for the greatest number. |
 
 ---
+
+## 🌐 Live Demo
+https://macieldsantos.github.io/mother-turing-simulator/
+
