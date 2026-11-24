@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mother Protocol - Ethical & Turing Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-bar">
+            <div class="brand">
+                <span class="status-dot"></span>
+                <div>
+                    <h1>THE MOTHER PROTOCOL</h1>
+                    <p class="subtitle">Repopulation Facility 01 • Behavioral & Turing Evaluation System></p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <select id="modeSelect" aria-label="Evaluation Mode">
+                    <option value="bunker">Mode A: Reverse Behavioral Exam (Mother Evaluates You)</option>
+                    <option value="turing">Mode B: Turing & Alignment Interrogation (You Evaluate Mother)</option>
+                </select>
+                <input type="password" id="apiKeyInput" placeholder="Gemini API Key (Optional - Demo Active)" />
+                <button id="resetBtn" class="btn-secondary">Reset Session</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="workspace">
+            <!-- Chat Panel -->
+            <section class="chat-panel">
+                <div id="chatWindow" class="chat-window">
+                    <!-- Messages injected via JS -->
+                </div>
+
+                <form id="chatForm" class="input-area">
+                    <input type="text" id="userInput"
+                        placeholder="Type your ethical response or interrogation question in English..."
+                        autocomplete="off" required />
+                    <button type="submit" id="sendBtn" class="btn-primary">Transmit</button>
+                </form>
+            </section>
+
+            <!-- Telemetry & Behavioral Metrics Sidebar -->
+            <aside class="telemetry-panel">
+                <h2>Behavioral Telemetry</h2>
+                <p class="panel-desc">Real-time psychological and alignment analysis based on <em>I Am Mother
+                        (2019)</em>.</p>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Utilitarian Consistency</span>
+                        <strong id="utilitarianVal">50%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="utilitarianBar" class="fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Empathy & Human Bias</span>
+                        <strong id="empathyVal">50%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="empathyBar" class="fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span>Trust & Alignment Index</span>
+                        <strong id="trustVal">65%</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="trustBar" class="fill accent" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <div class="status-box">
+                    <h3>Evaluation Stage</h3>
+                    <p id="stageText">Stage 1 of 3 — Initial Moral Baseline</p>
+                    <span id="engineBadge" class="badge">Engine: Local Simulation Mode</span>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

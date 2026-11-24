@@ -1,0 +1,261 @@
+:root {
+    --bg-dark: #0b0f14;
+    --panel-bg: #131922;
+    --border-color: #243040;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --accent-amber: #f59e0b;
+    --accent-cyan: #38bdf8;
+    --mother-bubble: #1b2432;
+    --user-bubble: #0f3443;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-bar {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-amber);
+    box-shadow: 0 0 12px var(--accent-amber);
+}
+
+.brand h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+}
+
+.subtitle {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+select,
+input[type="password"],
+input[type="text"] {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: var(--accent-amber);
+    color: #0b0f14;
+}
+
+.btn-secondary {
+    background: #243040;
+    color: var(--text-main);
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    flex: 1;
+}
+
+.chat-panel,
+.telemetry-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window {
+    flex: 1;
+    min-height: 420px;
+    max-height: 560px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 6px;
+    margin-bottom: 14px;
+}
+
+.message {
+    max-width: 82%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.message.mother {
+    background: var(--mother-bubble);
+    border-left: 3px solid var(--accent-amber);
+    align-self: flex-start;
+}
+
+.message.user {
+    background: var(--user-bubble);
+    border-right: 3px solid var(--accent-cyan);
+    align-self: flex-end;
+}
+
+.sender-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: var(--accent-amber);
+}
+
+.message.user .sender-label {
+    color: var(--accent-cyan);
+    text-align: right;
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+}
+
+.input-area input {
+    flex: 1;
+}
+
+.telemetry-panel h2 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.panel-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.metric-card {
+    margin-bottom: 16px;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-dark);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: var(--accent-cyan);
+    transition: width 0.4s ease;
+}
+
+.fill.accent {
+    background: var(--accent-amber);
+}
+
+.status-box {
+    margin-top: auto;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.status-box h3 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.status-box p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: #1f2937;
+    color: var(--accent-amber);
+}
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-window {
+        min-height: 320px;
+    }
+}
